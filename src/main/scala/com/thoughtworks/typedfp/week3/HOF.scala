@@ -11,7 +11,7 @@ object HOF extends App {
 
   type EmailFilter = Email => Boolean
 
-  def newMailsForUser(mails: Seq[Email], f: EmailFilter) = ???
+  def newMailsForUser(mails: Seq[Email], f: EmailFilter): Seq[Email] = ???
 
   val sentByOneOf: Set[String] => EmailFilter = senders => email => ???
   val notSentByAnyOf: Set[String] => EmailFilter = senders => email => ???
@@ -27,7 +27,7 @@ object HOF extends App {
 
   def complement[A](predicate: A => Boolean) = ???
 
-  val betterNotSentByAnyOf = ???
-  val betterBetterMaxSize = ???
+  val betterNotSentByAnyOf: Set[String] => EmailFilter = ???
+  val betterBetterMaxSize: Int => EmailFilter = ???
 
 }
